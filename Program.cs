@@ -11,14 +11,14 @@ namespace consonant_value
     {
         static void Main(string[] args)
         {
-            string z = "zodiac";
+            // string z = "zodiac";
             // string c = "chruschtschov";
             // string k = "khrushchev";
             // string s = "strength";
             // string cp = "catchphrase";
             // string twelfth = "twelftstreet";
             // string m = "mischtschenkoana";
-            string a = "nvwjoznvpumugkgmkfhtrqmyefeuskoqvscypy";
+            // string a = "nvwjoznvpumugkgmkfhtrqmyefeuskoqvscypy";
             string q = "jverpkftxoqrhdqjtbtewxcaohumhntztobmmfrqnrxzfjnqt";
             // Solve(z);
             // Solve(s);
@@ -72,69 +72,67 @@ namespace consonant_value
                 {
                     int value = alpha[y];
                     incrementor += value;
+                    
                 }
 
 
             }
-
-            foreach (int kvp in totals)
-            {
-                WriteLine(kvp);
-            }
+            totals.Add(incrementor);
 
 
             int final = totals.Max();
             WriteLine(final);
+            return final;
 
 
 
 
-            char[] vowels = { 'a', 'e', 'i', 'o', 'u' };
-            int vposition = s.IndexOfAny(vowels);
+            // char[] vowels = { 'a', 'e', 'i', 'o', 'u' };
+            // int vposition = s.IndexOfAny(vowels);
 
-            string str = s.Substring(0, vposition);
+            // string str = s.Substring(0, vposition);
 
-            int nextv = s.IndexOfAny(vowels, vposition + 1);
+            // int nextv = s.IndexOfAny(vowels, vposition + 1);
 
-            int nc = vposition + 1;
+            // int nc = vposition + 1;
 
-            int flength = s.Length - vposition - 1;
+            // int flength = s.Length - vposition - 1;
 
-            string fstr = s.Substring(nc, flength);
+            // string fstr = s.Substring(nc, flength);
 
-            int nextstrl = nextv - nc;
+            // int nextstrl = nextv - nc;
 
-            string nxstr = nextstrl > 0 ? s.Substring(nc, nextstrl) : fstr;
+            // string nxstr = nextstrl > 0 ? s.Substring(nc, nextstrl) : fstr;
 
-            int res = 0;
+            // int res = 0;
 
-            int total = 0;
+            // int total = 0;
 
 
-            for (int j = 0; j < nxstr.Length; j++)
-            {
-                int w = alpha[nxstr[j]];
-                res = res + w;
-            }
+            // for (int j = 0; j < nxstr.Length; j++)
+            // {
+            //     int w = alpha[nxstr[j]];
+            //     res = res + w;
+            // }
 
-            int result = 0;
+            // int result = 0;
 
-            for (int i = 0; i < str.Length; i++)
-            {
-                int v = alpha[str[i]];
-                result = result + v;
-            }
+            // for (int i = 0; i < str.Length; i++)
+            // {
+            //     int v = alpha[str[i]];
+            //     result = result + v;
+            // }
 
-            if (result > res)
-            {
-                total = result;
-            }
-            else
-            {
-                total = res;
-            }
+            // if (result > res)
+            // {
+            //     total = result;
+            // }
+            // else
+            // {
+            //     total = res;
+            // }
             // WriteLine(total);
-            return total;
+            // return total;
         }
     }
 }
