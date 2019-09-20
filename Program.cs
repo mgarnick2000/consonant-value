@@ -12,15 +12,15 @@ namespace consonant_value
         static void Main(string[] args)
         {
             // string z = "zodiac";
-            string c = "chruschtschov";
+            // string c = "chruschtschov";
             // string k = "khrushchev";
-            // string s = "strength";
+            string s = "strength";
             // string cp = "catchphrase";
             // string twelfth = "twelftstreet";
             // string m = "mischtschenkoana";
             // Solve(z);
-            // Solve(s);
-            Solve(c);
+            Solve(s);
+            // Solve(c);
             // Solve(k);
         }
 
@@ -57,17 +57,40 @@ namespace consonant_value
 
             char[] vowels = { 'a', 'e', 'i', 'o', 'u' };
             int vposition = s.IndexOfAny(vowels);
+
             string str = s.Substring(0, vposition);
+            
+            int nextv = s.IndexOfAny(vowels, vposition + 1);
+
+            int nc = vposition + 1;
+
+            int nextstrl = nextv - nc;
+
+            string nxstr = s.Substring(nc, nextstrl);
+
+            int res = 0;
+            
+            int total = 0;
+            for ( int j = 0; j < nxstr.Length; j++) {
+                int w = alpha[nxstr[j]];
+                res = res + w;
+            }
+
             int result = 0;
-            WriteLine(str);
-            for (int i = vposition - 1; i > 0; i--)
+
+            for (int i = 0; i < str.Length; i++)
             {
                 int v = alpha[str[i]];
                 result = result + v;
-
             }
-            WriteLine(result);
-            return result;
+
+            if (result > res) {
+                total = result;
+            } else {
+                total = res;
+            }
+            WriteLine(total);
+            return total;
         }
     }
 }
