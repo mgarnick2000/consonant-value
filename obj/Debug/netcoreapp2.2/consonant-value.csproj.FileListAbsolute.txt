@@ -1,0 +1,11 @@
+/Users/markgarnick/projects/consonant-value/bin/Debug/netcoreapp2.2/consonant-value.deps.json
+/Users/markgarnick/projects/consonant-value/bin/Debug/netcoreapp2.2/consonant-value.runtimeconfig.json
+/Users/markgarnick/projects/consonant-value/bin/Debug/netcoreapp2.2/consonant-value.runtimeconfig.dev.json
+/Users/markgarnick/projects/consonant-value/bin/Debug/netcoreapp2.2/consonant-value.dll
+/Users/markgarnick/projects/consonant-value/bin/Debug/netcoreapp2.2/consonant-value.pdb
+/Users/markgarnick/projects/consonant-value/obj/Debug/netcoreapp2.2/consonant-value.csprojAssemblyReference.cache
+/Users/markgarnick/projects/consonant-value/obj/Debug/netcoreapp2.2/consonant-value.csproj.CoreCompileInputs.cache
+/Users/markgarnick/projects/consonant-value/obj/Debug/netcoreapp2.2/consonant-value.AssemblyInfoInputs.cache
+/Users/markgarnick/projects/consonant-value/obj/Debug/netcoreapp2.2/consonant-value.AssemblyInfo.cs
+/Users/markgarnick/projects/consonant-value/obj/Debug/netcoreapp2.2/consonant-value.dll
+/Users/markgarnick/projects/consonant-value/obj/Debug/netcoreapp2.2/consonant-value.pdb
