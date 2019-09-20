@@ -64,13 +64,17 @@ namespace consonant_value
 
             int nc = vposition + 1;
 
+            int flength = s.Length - vposition - 1;
+
+            string fstr = s.Substring(nc, flength);
+
             int nextstrl = nextv - nc;
 
-            string nxstr = s.Substring(nc, nextstrl);
-
+            string nxstr = nextstrl > 0 ? s.Substring(nc, nextstrl) : fstr;
             int res = 0;
             
             int total = 0;
+
             for ( int j = 0; j < nxstr.Length; j++) {
                 int w = alpha[nxstr[j]];
                 res = res + w;
