@@ -11,7 +11,7 @@ namespace consonant_value
     {
         static void Main(string[] args)
         {
-            // string z = "zodiac";
+            string z = "zodiac";
             // string c = "chruschtschov";
             // string k = "khrushchev";
             // string s = "strength";
@@ -19,11 +19,13 @@ namespace consonant_value
             // string twelfth = "twelftstreet";
             // string m = "mischtschenkoana";
             string a = "nvwjoznvpumugkgmkfhtrqmyefeuskoqvscypy";
+            string q = "jverpkftxoqrhdqjtbtewxcaohumhntztobmmfrqnrxzfjnqt";
             // Solve(z);
             // Solve(s);
             // Solve(c);
             // Solve(k);
-            Solve(a);
+            // Solve(a);
+            Solve(q);
         }
 
         static int Solve(string s)
@@ -56,12 +58,42 @@ namespace consonant_value
             alpha.Add('y', 25);
             alpha.Add('z', 26);
 
+            int incrementor = 0;
+            List<int> totals = new List<int>();
+            for (int i = 0; i < s.Length; i++)
+            {
+                char y = s[i];
+                if (y == 'a' || y == 'e' || y == 'i' || y == 'o' || y == 'u')
+                {
+                    totals.Add(incrementor);
+                    incrementor = 0;
+                }
+                else
+                {
+                    int value = alpha[y];
+                    incrementor += value;
+                }
+
+
+            }
+
+            foreach (int kvp in totals)
+            {
+                WriteLine(kvp);
+            }
+
+
+            int final = totals.Max();
+            WriteLine(final);
+
+
+
 
             char[] vowels = { 'a', 'e', 'i', 'o', 'u' };
             int vposition = s.IndexOfAny(vowels);
 
             string str = s.Substring(0, vposition);
-            
+
             int nextv = s.IndexOfAny(vowels, vposition + 1);
 
             int nc = vposition + 1;
@@ -74,14 +106,13 @@ namespace consonant_value
 
             string nxstr = nextstrl > 0 ? s.Substring(nc, nextstrl) : fstr;
 
-
-
             int res = 0;
-            
+
             int total = 0;
 
-            
-            for ( int j = 0; j < nxstr.Length; j++) {
+
+            for (int j = 0; j < nxstr.Length; j++)
+            {
                 int w = alpha[nxstr[j]];
                 res = res + w;
             }
@@ -94,12 +125,15 @@ namespace consonant_value
                 result = result + v;
             }
 
-            if (result > res) {
+            if (result > res)
+            {
                 total = result;
-            } else {
+            }
+            else
+            {
                 total = res;
             }
-            WriteLine(total);
+            // WriteLine(total);
             return total;
         }
     }
