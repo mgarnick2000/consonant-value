@@ -14,14 +14,16 @@ namespace consonant_value
             // string z = "zodiac";
             // string c = "chruschtschov";
             // string k = "khrushchev";
-            string s = "strength";
+            // string s = "strength";
             // string cp = "catchphrase";
             // string twelfth = "twelftstreet";
             // string m = "mischtschenkoana";
+            string a = "nvwjoznvpumugkgmkfhtrqmyefeuskoqvscypy";
             // Solve(z);
-            Solve(s);
+            // Solve(s);
             // Solve(c);
             // Solve(k);
+            Solve(a);
         }
 
         static int Solve(string s)
@@ -71,10 +73,14 @@ namespace consonant_value
             int nextstrl = nextv - nc;
 
             string nxstr = nextstrl > 0 ? s.Substring(nc, nextstrl) : fstr;
+
+
+
             int res = 0;
             
             int total = 0;
 
+            
             for ( int j = 0; j < nxstr.Length; j++) {
                 int w = alpha[nxstr[j]];
                 res = res + w;
